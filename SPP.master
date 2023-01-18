@@ -1,0 +1,263 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SPP.master.cs" Inherits="Placement_Portal_SPP" %>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Student Placement Portal| Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link href="theme/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->  
+    <!-- Ionicons -->    
+    <link href="theme/Admin_.css" rel="stylesheet" />
+   
+    <link href="theme/font-awesome.min.css" rel="stylesheet" />
+   
+    <link href="theme/all_skin_min.css" rel="stylesheet" />
+   
+    <link href="theme/ionicons.min.css" rel="stylesheet" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+
+    <style>
+        
+        .hams {
+            float: left;
+            height: 50px;
+        }
+
+        .lbl {
+            position: absolute;
+            top: 9px;
+            right: 7px;
+            text-align: center;
+            font-size: 9px;
+            padding: 2px 3px;
+            line-height: .9;
+            background:#a30ff2;
+        }
+        #textsidenav{
+            color:blue;
+            background-color:white;
+
+        }
+    </style>
+   
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse" style="background-color:#4848ef">
+    <form id="form1" runat="server">
+        <div class="wrapper">
+
+            <header class="main-header">
+
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <span class="logo-mini">SPP</span>
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg">SPP</span>
+                </a>
+
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <a href="#" class="navbar-brand" style="margin-left:480px" ><b>Student Placement Portal</b></a>
+
+                    <!-- Navbar Right Menu -->
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <!-- Messages: style can be found in dropdown.less-->
+                            <li class="dropdown notifications-menu">
+
+                              <%--// <asp:LinkButton ID="lnk_home" runat="server" OnClick="lnk_home_Click" style="font-size:20px">
+                                    <i class="fa fa-home"></i><span></span>
+                                </asp:LinkButton>--%>
+                           <%-- <li class="dropdown messages-menu" style="margin-right: 3px">
+                                <!-- Menu toggle button -->
+
+                                <a href="DocumentMgmt/Inbox.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="label label-success"><asp:Label runat="server" ID="lblmsg" Text=""></asp:Label> </span>
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    <li>
+                                        <!-- inner menu: contains the messages -->
+                                        <ul class="menu">
+                                            <li>
+                                                <!-- start message -->
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <!-- User Image -->
+
+                                                    </div>
+                                                    <!-- Message title and timestamp -->
+                                                    <%--<h4>
+                                                        Support Team
+                                                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                    </h4>--%>
+                                                    <!-- The message -->
+                                                   <%-- <asp:Label runat="server" ID="lblmsgview" Text=""></asp:Label>
+                                                </a>--%>
+                                           <%-- </li>--%>
+                                            <!-- end message -->
+                                       <%-- </ul>--%>
+                                        <!-- /.menu -->
+                                  <%--  </li>--%>
+                                   <%-- <li class="footer"><asp:LinkButton runat="server" ID="lnl_msg" Text="See All Messages" OnClick="lnl_msg_Click"></asp:LinkButton></li>--%>
+                             <%--   </ul>
+                            </li>--%>
+
+
+
+<%--                            <li title="Total No. of Hits" class="dropdown notifications-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-bolt"></i><span class="lbl"><asp:Label ToolTip="Total No. of Hits" runat="server" ID="lblhits" Text=""></asp:Label></span>
+                                </a>
+
+                            </li>
+                            <li title="Total No. of Users" class="dropdown notifications-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-users"></i><span class="lbl"><asp:Label ToolTip="Total No. of Users " runat="server" ID="lblusers" Text=""></asp:Label></span>
+                                </a>
+
+                            </li>--%>
+
+                            <li class="dropdown user user-menu">
+                                <!-- Menu Toggle Button -->
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <!-- The user image in the navbar-->
+                                    <asp:Image ID="imguser" src="Styles/Images/logout_logo.png"  Class="user-image" AlternateText="user image" runat="server" />
+
+                                    <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                    <span class="hidden-xs"><asp:Label Text="" runat="server" ID="lblusername"></asp:Label></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+                                    <li class="user-header">
+                                        <asp:Image ID="Image1" src="Styles/Images/logout_logo.png"  Class="img-circle" AlternateText="user image" runat="server" /><br /><br /><br /><br /><br />
+                                        <asp:Button ID="log" runat="server" OnClick="logout" Text="Logout" />
+                                        <p>
+                                            <small><asp:Label Text="" runat="server" ID="lblbase"></asp:Label></small>
+                                        </p>
+                                        <p>
+                                            <small><asp:Label Text="" runat="server" ID="lblpbno"></asp:Label></small>
+                                        </p>
+                                    </li>
+                                    <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-12 text-center">
+                                                <%--<asp:LinkButton ID="lnladmin" OnClick="lnladmin_Click" runat="server" Class="fa fa-user-secret" Text="Admin"></asp:LinkButton>--%>
+
+                                            </div>
+
+                                        </div>
+                                        <!-- /.row -->
+                                    </li>
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                          <%--  <asp:LinkButton ID="lnl_pass" OnClick="lnl_pass_Click" runat="server" class="btn btn-default btn-flat" Text="Change Password"></asp:LinkButton>--%>
+
+                                        </div>
+                                        <div class="pull-right">
+                                       <%--     <asp:LinkButton ID="lnl_log" OnClick="lnl_log_Click" runat="server" class="btn btn-danger" Text="Sign Out"></asp:LinkButton>--%>
+
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar" style="width: 230px;">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <!-- search form -->
+                    <!-- search form -->
+                    <%--   <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>--%>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <center>                        
+                        <li class="header" id="textsidenav">STUDENT PLACEMENT PORTAL </li>
+                        </center>
+                           <li>
+                            <a href="STD.aspx" runat="server">
+                                <i class="fa fa-th"></i> <span>Student Details</span>
+                                <span class="pull-right-container">
+                                    <small class="label pull-right bg-green"></small>
+                                </span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="SEMDaspx.aspx" runat="server">
+                                <i class="fa fa-th"></i> <span>SEM Details</span>
+                                <span class="pull-right-container">
+                                    <small class="label pull-right bg-green"></small>
+                                </span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="ITD.aspx" runat="server">
+                                <i class="fa fa-th"></i> <span>Interview Details</span>
+                                <span class="pull-right-container">
+                                    <small class="label pull-right bg-green"></small>
+                                </span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper"  style="min-height: 750px">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                  
+                    
+                </section>
+               
+            </div>
+            <!-- /.content-wrapper -->
+            <%--  <div class="control-sidebar-bg"></div>--%>
+
+        </div>
+
+     
+        <!-- Bootstrap 3.3.7 -->
+        <script src="theme/jquery.min.js"></script>
+        
+        <script src="theme/bootstrap.min.js"></script>
+
+       
+
+        <script src="theme/adminlte.min.js"></script>
+    </form>
+</body>
+
+</html>
+
