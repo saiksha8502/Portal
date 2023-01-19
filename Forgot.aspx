@@ -1,8 +1,5 @@
 ﻿<%@ Page Title="" Language="C#"  AutoEventWireup="true" CodeFile="Forgot.aspx.cs" Inherits="Placement_Portal_Forgot" %>
-
-
     <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Forgot Password</title>
@@ -107,6 +104,3 @@
     </form>
 </body>
 </html>
-
-
-
