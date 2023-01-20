@@ -8,24 +8,19 @@ using System.Data;
 using System.Web.UI.WebControls.WebParts;
 using System.Data.OracleClient;
 using System.Data.OleDb;
-
 public partial class Placement_Portal_Forgot : System.Web.UI.Page
 {
     string strConnString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-
     OracleCommand com;
     OracleDataAdapter orada;
-
     string str;
     DataTable dt;
     int RowCount;
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
     protected void Save(object sender, EventArgs e)
-    {
-        
+    {    
         if (newpasswordTXT.Text.Length>0|| usernameTXT.Text.Length > 0)
         {
             if (newpasswordTXT.Text == confirmpasswordTXT.Text)
