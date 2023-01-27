@@ -131,15 +131,13 @@
         </div>
             <br /><br /><br />
        <center>
-
             <center>
                <asp:GridView ID="gv" runat="server"  AutoGenerateColumns="false"
             style="overflow-Y:scroll;overflow:scroll" Width="50%" Height="5%"
       Allowpaging="false" pagesizing="true" ShowFooter="false"  RowStyle-HorizontalAlign="Center" >        
     <HeaderStyle BackColor="#0669e4" Font-Bold="True" ForeColor="White" />
            <RowStyle BackColor="White" />    
-    <Columns>
-        
+    <Columns>        
          <asp:BoundField DataField="SemID" HeaderText="Sem ID" />
          <asp:BoundField DataField="CGPA" HeaderText="CGPA" />        
            <asp:BoundField DataField="Backlogs" HeaderText="Backlogs" />
@@ -155,4 +153,3 @@
 </body>
 </html>
 </asp:Content>
-
