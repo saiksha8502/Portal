@@ -8,14 +8,11 @@ using System.Data;
 using System.Web.UI.WebControls.WebParts;
 using System.Data.OracleClient;
 using System.Data.OleDb;
-
 public partial class Placement_Portal_SEMDaspx : System.Web.UI.Page
 {
     string strConnString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-
     OracleCommand com;
     OracleDataAdapter orada;
-
     string str;
     DataTable dt;
     int RowCount;
@@ -27,7 +24,6 @@ public partial class Placement_Portal_SEMDaspx : System.Web.UI.Page
             // populatesemid();
             fillgrid();
         }
-
         //fillgrid();
     }
     protected void Save(object sender, EventArgs e)
@@ -103,18 +99,5 @@ public partial class Placement_Portal_SEMDaspx : System.Web.UI.Page
             gv.Rows[0].Cells[0].Text = "";
         }
     }
-    //    public void fillgrid()
-    //{
-
-    //    OracleConnection con = new OracleConnection(strConnString);
-    //    con.Open();
-    //    string str = "Select semid,cgpa,backlogs, active, creditsearned, deptid, from semdetails from employee";
-    //    OracleConnection conr = new OracleConnection(strConnString);
-    //    OracleCommand com = new OracleCommand(str);
-    //    OracleDataAdapter orada = new OracleDataAdapter(com.CommandText, conr);
-    //    DataTable ds = new DataTable();
-    //    orada.Fill(ds);
-    //    gv.DataSource = ds;
-    //    gv.DataBind();
-    //}
+   
 }
