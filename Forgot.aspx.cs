@@ -43,19 +43,5 @@ public partial class Placement_Portal_Forgot : System.Web.UI.Page
         newpasswordTXT.Text = string.Empty;
         confirmpasswordTXT.Text = string.Empty;
     }
-    //else
-    //{
-    //    //Response.Redirect("EPMasterPage.master");
-    //    Label1.Visible = true;
-    //    Label1.Text = "Invalid User Name or Password! Please try again! ";
-
-    //}
-
-    //OracleConnection con = new OracleConnection(strConnString);
-    //con.Open();
-    //str = "Insert into FP values ('" + usernameTXT.Text +"','" +mailidTXT.Text +"', '"+newpasswordTXT.Text+"','"+ confirmpasswordTXT.Text +"')";
-    //OracleCommand cmd = new OracleCommand(str, con);
-    //cmd.ExecuteNonQuery();
-    //con.Close();
 }
    
