@@ -8,11 +8,9 @@ using System.Data;
 using System.Web.UI.WebControls.WebParts;
 using System.Data.OracleClient;
 using System.Data.OleDb;
-
 public partial class Placement_Portal_ITD : System.Web.UI.Page
 {
     string strConnString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-
     OracleCommand com;
     OracleDataAdapter orada;
     string str;
@@ -23,14 +21,10 @@ public partial class Placement_Portal_ITD : System.Web.UI.Page
         if (!IsPostBack)
         {
             populatedeptid();
-            // populatesemid();
-           
         }
-
     }
     protected void Save(object sender, EventArgs e)
     {
-
         OracleConnection con = new OracleConnection(strConnString);
         con.Open();
         string str = "Insert into interviewdetails values ('" + NameTXT.Text + "','" + EmailIDTXT.Text + "', '" + ddldepid.SelectedValue + "','" + ddlsemid.SelectedValue + "','" + ddlscheduled.SelectedValue + "','" + CompanyNameTXT.Text + "')";
@@ -47,7 +41,6 @@ public partial class Placement_Portal_ITD : System.Web.UI.Page
         orada = new OracleDataAdapter(com.CommandText, con);
         dt = new DataTable();
         orada.Fill(dt);
-
         ddldepid.DataSource = dt;
         ddldepid.DataValueField = "deptid";
         ddldepid.DataTextField = "deptname";
